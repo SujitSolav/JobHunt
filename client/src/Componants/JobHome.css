@@ -1,0 +1,218 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px; /* Increased max-width for larger screens */
+}
+
+/* Job item styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards */
+  gap: 1rem; /* Space between cards */
+}
+
+.job-item {
+  background-color: #e8e8e8;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 1rem); /* 3 cards per row with some space between */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.job-item h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.job-item p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.apply-button {
+  display: block;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  position: static;
+  bottom: 1rem;
+  right: 1rem;
+  transition: background-color 0.3s;
+  width: calc(100% - 2rem); /* Adjust button width to fit within job item padding */
+  margin: 0 auto; /* Center the button */
+}
+
+.apply-button:hover {
+  background-color: #005bb5;
+}
+
+.apply-button.applied {
+  background-color: #4caf50; /* Green color for applied button */
+  cursor: not-allowed;
+}
+
+.apply-button:disabled {
+  background-color: #c1ffc4; /* Gray color when disabled */
+  cursor: not-allowed;
+  border: 1px solid rgb(6, 99, 6);
+  color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .job-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .job-item {
+    flex: 1 1 100%; /* 1 card per row */
+  }
+
+  .apply-button {
+    width: calc(100% - 2rem); /* Adjust button width to fit within job item padding */
+    margin: 0 auto; /* Center the button */
+    position: static;
+    margin-top: 1rem;
+  }
+}
+.job-home-container {
+  display: flex;
+}
+
+.vertical-navbar {
+  width: 200px;
+  height: 100vh; /* Full height */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-navbar h2 {
+  margin-bottom: 20px;
+}
+
+.vertical-navbar button {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.vertical-navbar button:hover {
+  background-color: #45a049;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.job-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button {
+  margin-top: 10px;
+}
+
+.apply-button.applied {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* JobHome.css */
+
+.apply-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width:40%;
+}
+
+.apply-button.applied {
+  border: 2px solid green;
+  color: green;
+  background-color: rgb(237, 253, 237); /* Optional: to differentiate the applied state */
+}
+
+.apply-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/* JobHome.css */
+
+.delete-button {
+  background-color: #d9534f; /* Bootstrap danger color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width:40%;
+}
+
+.delete-button:hover {
+  background-color: #c9302c; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.delete-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.delete-button:active {
+  background-color: #ac2925; /* Even darker red when clicked */
+  transform: scale(1); /* Return to normal size when clicked */
+}
